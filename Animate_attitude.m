@@ -1,6 +1,8 @@
-function Animate_attitude(t,y)
+function Animate_attitude(t,y,ang)
 
-y = y*180/pi; % convert rads to degrees
+if strcmp(ang,'rad')
+    y = y*180/pi; % convert rads to degrees
+end
 for ii = 1:length(t)
     O_DA = O_mat(y(ii,1),1)*O_mat(y(ii,2),2)*O_mat(y(ii,3),3);
     
